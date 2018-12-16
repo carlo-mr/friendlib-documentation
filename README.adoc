@@ -1,0 +1,7 @@
+= FriendLib Architecture Documentation image:https://travis-ci.com/carlo-mr/friendlib-documentation.svg?branch=master["Build Status", link="https://travis-ci.com/carlo-mr/friendlib-documentation"]
+
+This repository contains the architecture documentation of the https://github.com/carlo-mr/friendlib-app[FriendLib Application].
+
+The documentation is based on the https://arc42.org[arc42] documentation template and uses the https://doctoolchain.github.io/docToolchain/[docToolchain] to build the documentation.
+
+The content of the master branch is built and published https://carlo-mr.github.io/friendlib-documentation/[here] using https://travis-ci.com[Travis].
