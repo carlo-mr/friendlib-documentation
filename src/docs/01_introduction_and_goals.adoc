@@ -30,6 +30,14 @@ If requirements documents exist this overview should refer to these documents.
 Keep these excerpts as short as possible. Balance readability of this document with potential redundancy w.r.t to requirements documents.
 ****
 
+FriendLib is an application which allows to lend books between friends.
+In order to support this users can manage their collection of books, add friends and see the virtual bookshelf of their friends.
+Furthermore lend requests can be sent to friends and the lend status of books can be tracked.
+
+The word FriendLib is a portmanteau of friendship and library.
+
+The main goal of this application is to play around with different technologies, programming languages, tools and processes (e.g. AppStore deployment).
+
 === Quality Goals
 
 [role="arc42help"]
@@ -44,6 +52,20 @@ If you as an architect do not know how the quality of your work will be judged â
 .Form
 A table with quality goals and concrete scenarios, ordered by priorities
 ****
+
+The following table contains the main quality goals of the solution with measureable/decidable scenarios.
+
+[options="header",cols="1,1,2,4"]
+|===
+|Id |Priority|Quality Attribute| Scenarios
+| Q-1 | 1 | Portability/Adaptability a|
+* App should be available as webpage, iOS and Android app
+| Q-2 | 2 | Ease-of-use a|
+* Main features of the app should be accessible with a maximum of 3 clicks
+* No user manual required to understand the features
+| Q-3 | 3 | Performance efficiency a|
+* The operating cost should be lower than 10â‚¬ / 1000 users / month.
+|===
 
 === Stakeholders
 
@@ -67,9 +89,12 @@ These stakeholders determine the extent and the level of detail of your work and
 Table with role names, person names, and their expectations with respect to the architecture and its documentation.
 ****
 
-[options="header",cols="1,2,2"]
+The following table contains the list of Stakeholders for the solution and its documentation along with their expectations about it.
+
+[options="header",cols="1,3"]
 |===
-|Role/Name|Contact|Expectations
-| _<Role-1>_ | _<Contact-1>_ | _<Expectation-1>_
-| _<Role-2>_ | _<Contact-2>_ | _<Expectation-2>_
+|Role/Name| Expectations
+| Developers  | Get an overview of the solution. Understand technical decisions.
+| Architects  | Have an example of the arc42 template.
+| https://github.com/carlo-mr[@carlo-mr] | Learn usage of arc42, docToolchain and other tools frameworks used in the course of writing the application.
 |===

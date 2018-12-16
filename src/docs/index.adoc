@@ -3,7 +3,7 @@
 //
 // ====================================
 
-= image:arc42-logo.png[arc42] Template
+= FriendLib Architecture Documentation
 // toc-title definition MUST follow document title without blank line!
 :toc-title: Table of Contents
 
@@ -24,12 +24,6 @@ endif::basebackend-html[]
 
 // configure EN settings for asciidoc
 include::config.adoc[]
-
-
-include::about-arc42.adoc[]
-
-// horizontal line
-***
 
 [role="arc42help"]
 ****
@@ -92,5 +86,10 @@ include::11_technical_risks.adoc[]
 <<<<
 // 12. Glossary
 include::12_glossary.adoc[]
+
+***
+<<<<
+// arc42
+include::about-arc42.adoc[]
 
 
