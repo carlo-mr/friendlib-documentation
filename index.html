@@ -5,7 +5,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.6.1">
-<title>Template</title>
+<title>FriendLib Architecture Documentation</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -519,7 +519,7 @@ table.CodeRay td.code>pre{padding:0}
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
-<h1><span class="image"><img src="images/arc42-logo.png" alt="arc42"></span> Template</h1>
+<h1>FriendLib Architecture Documentation</h1>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
@@ -590,26 +590,6 @@ table.CodeRay td.code>pre{padding:0}
 	.arc42help {display:hidden;}
 }
 </style>
-<div class="paragraph">
-<p><strong>About arc42</strong></p>
-</div>
-<div class="paragraph lead">
-<p>arc42, the Template for documentation of
-software and system architecture.</p>
-</div>
-<div class="paragraph">
-<p>By Dr. Gernot Starke, Dr. Peter Hruschka and contributors.</p>
-</div>
-<div class="paragraph">
-<p>Template Revision: 7.0 EN (based on asciidoc), January 2017</p>
-</div>
-<div class="paragraph">
-<p>&#169;
-We acknowledge that this document uses material from the
-arc 42 architecture template, <a href="http://www.arc42.de" class="bare">http://www.arc42.de</a>.
-Created by Dr. Peter Hruschka &amp; Dr. Gernot Starke.</p>
-</div>
-<hr>
 <div class="sidebarblock arc42help">
 <div class="content">
 <div class="admonitionblock note">
@@ -681,6 +661,17 @@ If requirements documents exist this overview should refer to these documents.</
 </div>
 </div>
 </div>
+<div class="paragraph">
+<p>FriendLib is an application which allows to lend books between friends.
+In order to support this users can manage their collection of books, add friends and see the virtual bookshelf of their friends.
+Furthermore lend requests can be sent to friends and the lend status of books can be tracked.</p>
+</div>
+<div class="paragraph">
+<p>The word FriendLib is a portmanteau of friendship and library.</p>
+</div>
+<div class="paragraph">
+<p>The main goal of this application is to play around with different technologies, programming languages, tools and processes (e.g. AppStore deployment).</p>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_quality_goals">1.2. Quality Goals</h3>
@@ -701,6 +692,66 @@ If you as an architect do not know how the quality of your work will be judged â
 </div>
 </div>
 </div>
+<div class="paragraph">
+<p>The following table contains the main quality goals of the solution with measureable/decidable scenarios.</p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 12.5%;">
+<col style="width: 12.5%;">
+<col style="width: 25%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Id</th>
+<th class="tableblock halign-left valign-top">Priority</th>
+<th class="tableblock halign-left valign-top">Quality Attribute</th>
+<th class="tableblock halign-left valign-top">Scenarios</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Q-1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Portability/Adaptability</p></td>
+<td class="tableblock halign-left valign-top"><div><div class="ulist">
+<ul>
+<li>
+<p>App should be available as webpage, iOS and Android app</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Q-2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ease-of-use</p></td>
+<td class="tableblock halign-left valign-top"><div><div class="ulist">
+<ul>
+<li>
+<p>Main features of the app should be accessible with a maximum of 3 clicks</p>
+</li>
+<li>
+<p>No user manual required to understand the features</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Q-3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Performance efficiency</p></td>
+<td class="tableblock halign-left valign-top"><div><div class="ulist">
+<ul>
+<li>
+<p>The operating cost should be lower than 10â‚¬ / 1000 users / month.</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="sect2">
 <h3 id="_stakeholders">1.3. Stakeholders</h3>
@@ -741,29 +792,32 @@ These stakeholders determine the extent and the level of detail of your work and
 </div>
 </div>
 </div>
+<div class="paragraph">
+<p>The following table contains the list of Stakeholders for the solution and its documentation along with their expectations about it.</p>
+</div>
 <table class="tableblock frame-all grid-all spread">
 <colgroup>
-<col style="width: 20%;">
-<col style="width: 40%;">
-<col style="width: 40%;">
+<col style="width: 25%;">
+<col style="width: 75%;">
 </colgroup>
 <thead>
 <tr>
 <th class="tableblock halign-left valign-top">Role/Name</th>
-<th class="tableblock halign-left valign-top">Contact</th>
 <th class="tableblock halign-left valign-top">Expectations</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>&lt;Role-1&gt;</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>&lt;Contact-1&gt;</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>&lt;Expectation-1&gt;</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Developers</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Get an overview of the solution. Understand technical decisions.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>&lt;Role-2&gt;</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>&lt;Contact-2&gt;</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>&lt;Expectation-2&gt;</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Architects</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Have an example of the arc42 template.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/carlo-mr">@carlo-mr</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Learn usage of arc42, docToolchain and other tools frameworks used in the course of writing the application.</p></td>
 </tr>
 </tbody>
 </table>
@@ -1807,12 +1861,36 @@ more precisely down to a level of scenarios that can be discussed and evaluated.
 </tr>
 </tbody>
 </table>
+<hr>
+<div style="page-break-after: always;"></div>
+<div class="paragraph">
+<p><span class="image"><img src="./images/arc42-logo.png" alt="arc42"></span> Template</p>
+</div>
+<div class="paragraph">
+<p><strong>About arc42</strong></p>
+</div>
+<div class="paragraph lead">
+<p>arc42, the Template for documentation of
+software and system architecture.</p>
+</div>
+<div class="paragraph">
+<p>By Dr. Gernot Starke, Dr. Peter Hruschka and contributors.</p>
+</div>
+<div class="paragraph">
+<p>Template Revision: 7.0 EN (based on asciidoc), January 2017</p>
+</div>
+<div class="paragraph">
+<p>&#169;
+We acknowledge that this document uses material from the
+arc 42 architecture template, <a href="http://www.arc42.de" class="bare">http://www.arc42.de</a>.
+Created by Dr. Peter Hruschka &amp; Dr. Gernot Starke.</p>
+</div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2018-12-16 16:08:05 UTC
+Last updated 2018-12-16 19:47:03 UTC
 </div>
 </div>
 </body>
